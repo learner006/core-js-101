@@ -32,9 +32,9 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-  let gi = '[\\dA-F]'; // rx_guid_item
+  const gi = '[\\dA-F]'; // rx_guid_item
 
-  return new RegExp(`{${gi}{8}(-${gi}{4}){3}-${gi}{12}}`,'i');
+  return new RegExp(`{${gi}{8}(-${gi}{4}){3}-${gi}{12}}`, 'i');
 }
 
 
