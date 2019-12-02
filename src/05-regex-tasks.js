@@ -32,7 +32,9 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-  throw new Error('Not implemented');
+  let gi = '[\\dA-F]'; // rx_guid_item
+
+  return new RegExp(`{${gi}{8}(-${gi}{4}){3}-${gi}{12}}`,'i');
 }
 
 
